@@ -1,0 +1,7 @@
+﻿@using System.Security.Claims;
+<h1 style="color:black">Perfil de @Context.User.Identity.Name</h1>
+<ul>
+    <li>Oficio: @Context.User.FindFirst(ClaimTypes.Role) </li>
+    <li>Sueldo: @Context.User.FindFirst("Sueldo")</li>
+    <li>Departamento: @Context.User.FindFirst("Departamento")</li>
+</ul>
